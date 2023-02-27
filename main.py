@@ -35,3 +35,16 @@ class Teacher(Model):
     class Meta:
         database=db
 Teacher.create_table(fail_silently=True)
+
+class People(Model):
+    name = CharField()
+    phonenumber = CharField()
+    email = CharField(unique=True)
+    county = CharField()
+    gender = CharField()
+    religion = CharField()
+    password = CharField()
+
+    class Meta:
+        database=db
+People.create_table(fail_silently=True)
